@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Diskritisasi (Tugas 2)" href="notebooks2.html" />
@@ -359,6 +361,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konsep-dasar">
+   Konsep Dasar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#persiapan">
    Persiapan
   </a>
@@ -405,6 +412,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konsep-dasar">
+   Konsep Dasar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#persiapan">
    Persiapan
   </a>
@@ -443,6 +455,24 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="menghitung-jarak-tugas-1">
 <h1>Menghitung Jarak (Tugas 1)<a class="headerlink" href="#menghitung-jarak-tugas-1" title="Permalink to this headline">#</a></h1>
+<section id="konsep-dasar">
+<h2>Konsep Dasar<a class="headerlink" href="#konsep-dasar" title="Permalink to this headline">#</a></h2>
+<p><strong>Dissimilarity</strong>
+Dissimilarity adalah pengukuran numerik untuk menunjukkan seberapa berbeda dua obyek data.
+Metode yang digunakan untuk menghitung dissimilarity umumnya ada 2, yaitu Euclidean Distance (Jarak Euclidean) dan Minkowski Distance (Jarak Minkowski).</p>
+<ol class="simple">
+<li><p>Euclidean Distance.</p></li>
+</ol>
+<p>Rumus yang digunakan yaitu</p>
+<div class="math notranslate nohighlight">
+\[ dist=\sqrt{\sum_{k=1}^n (p_k - q_k)} \]</div>
+<p>Dgn ketentuan: n adalah jumlah dimensi(atribut), pk dan qk adalah nilai atribut ke-k untuk obyek data p dan q.</p>
+<ol class="simple">
+<li><p>Minkowski Distance</p></li>
+</ol>
+<p>Rumus yang digunakan yaitu
+$<span class="math notranslate nohighlight">\( dist=(\sum_{k=1}^n |p_k-q_k|^r)^\frac{1}{r} \)</span>$</p>
+</section>
 <section id="persiapan">
 <h2>Persiapan<a class="headerlink" href="#persiapan" title="Permalink to this headline">#</a></h2>
 <section id="import-modul">
@@ -471,7 +501,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f15fe8b1-dd6b-415e-83df-dfff02cff471">
+  <div id="df-e6c29047-e52c-4e42-9139-a501c253d396">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -584,7 +614,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f15fe8b1-dd6b-415e-83df-dfff02cff471')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e6c29047-e52c-4e42-9139-a501c253d396')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -635,12 +665,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f15fe8b1-dd6b-415e-83df-dfff02cff471 button.colab-df-convert');
+          document.querySelector('#df-e6c29047-e52c-4e42-9139-a501c253d396 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f15fe8b1-dd6b-415e-83df-dfff02cff471');
+          const element = document.querySelector('#df-e6c29047-e52c-4e42-9139-a501c253d396');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
