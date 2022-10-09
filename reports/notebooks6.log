@@ -17,20 +17,30 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-y = iris["variety"]
-X = iris.drop(columns=["variety"])
-clf = tree.DecisionTreeClassifier(criterion="gini")
-clf = clf.fit(X, y)
+#plt the figure, setting a black background
+plt.figure(figsize=(10,10))
+#create the tree plot
+a = tree.plot_tree(clf,
+                   #use the feature names stored
+                   feature_names = feature_names,
+                   #use the class names stored
+                   class_names = labels,
+                   rounded = True,
+                   filled = True,
+                   fontsize=8)
+#show the plot
+plt.show()
 ------------------
 
 [0;31m[0m
 [0;31mNameError[0mTraceback (most recent call last)
-[0;32m<ipython-input-3-e7719b6c816f>[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0my[0m [0;34m=[0m [0miris[0m[0;34m[[0m[0;34m"variety"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      2[0m [0mX[0m [0;34m=[0m [0miris[0m[0;34m.[0m[0mdrop[0m[0;34m([0m[0mcolumns[0m[0;34m=[0m[0;34m[[0m[0;34m"variety"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      3[0m [0mclf[0m [0;34m=[0m [0mtree[0m[0;34m.[0m[0mDecisionTreeClassifier[0m[0;34m([0m[0mcriterion[0m[0;34m=[0m[0;34m"gini"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      4[0m [0mclf[0m [0;34m=[0m [0mclf[0m[0;34m.[0m[0mfit[0m[0;34m([0m[0mX[0m[0;34m,[0m [0my[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m<ipython-input-4-0d1e3d0a8a06>[0m in [0;36m<module>[0;34m[0m
+[1;32m      4[0m a = tree.plot_tree(clf,
+[1;32m      5[0m                    [0;31m#use the feature names stored[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 6[0;31m                    [0mfeature_names[0m [0;34m=[0m [0mfeature_names[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      7[0m                    [0;31m#use the class names stored[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      8[0m                    [0mclass_names[0m [0;34m=[0m [0mlabels[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mNameError[0m: name 'iris' is not defined
-NameError: name 'iris' is not defined
+[0;31mNameError[0m: name 'feature_names' is not defined
+NameError: name 'feature_names' is not defined
 
