@@ -374,6 +374,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dasar-teori">
+   Dasar Teori
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#loading-and-preprocessing-data">
    Loading and preprocessing data
   </a>
@@ -437,6 +442,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dasar-teori">
+   Dasar Teori
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#loading-and-preprocessing-data">
    Loading and preprocessing data
   </a>
@@ -492,6 +502,22 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="k-mean-clustering-tugas-5">
 <h1>K-Mean Clustering (Tugas 5)<a class="headerlink" href="#k-mean-clustering-tugas-5" title="Permalink to this headline">#</a></h1>
+<section id="dasar-teori">
+<h2>Dasar Teori<a class="headerlink" href="#dasar-teori" title="Permalink to this headline">#</a></h2>
+<p><strong>Apa itu K-mean Clustering</strong></p>
+<p>K-means merupakan salah satu algoritma yang bersifat unsupervised learning. K-Means memiliki fungsi untuk mengelompokkan data kedalam data cluster. Algoritma ini dapat menerima data tanpa ada label kategori. K-Means Clustering Algoritma juga merupakan metode non-hierarchy. Metode Clustering Algoritma adalah mengelompokkan beberapa data ke dalam kelompok yang menjelaskan data dalam satu kelompok memiliki karakteristik yang sama dan memiliki karakteristik yang berbeda dengan data yang ada di kelompok lain. Cluster Sampling adalah teknik pengambilan sampel di mana unit-unit populasi dipilih secara acak dari kelompok yang sudah ada yang disebut ‘cluster, nah Clustering atau klasterisasi adalah salah satu masalah yang menggunakan teknik unsupervised learning.</p>
+<p>K-Means Clustering adalah suatu metode penganalisaan data atau metode Data Mining yang melakukan proses pemodelan unssupervised learning dan menggunakan metode yang mengelompokan data berbagai partisi.</p>
+<p>K Means Clustering memiliki objective yaitu meminimalisasi object function yang telah di atur pada proses clasterisasi. Dengan cara minimalisasi variasi antar 1 cluster dengan maksimalisasi variasi dengan data di cluster lainnya.</p>
+<p>Algoritma K-means clustering</p>
+<ol class="simple">
+<li><p>Menentukan jumlah cluster</p></li>
+<li><p>Secara acak mendistribusikan data cluster</p></li>
+<li><p>Menghitung rata rata dari data yang ada di cluster.</p></li>
+<li><p>Menggunakan langkah baris 3 kembali sesuai nilai treshold</p></li>
+<li><p>Menghitung jarak antara data dan nilai centroid(K means clustering)</p></li>
+<li><p>Distance space dapat diimplementasikan untuk menghitung jarak data dan centroid. Contoh penghitungan jarak yang sering digunakan adalah manhattan/city blok distance</p></li>
+</ol>
+</section>
 <section id="loading-and-preprocessing-data">
 <h2>Loading and preprocessing data<a class="headerlink" href="#loading-and-preprocessing-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
@@ -552,7 +578,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6cd28d2f-d713-42a4-b839-8a3a18ba1b8b">
+  <div id="df-448c918c-05a0-47d2-9a42-7d6cc11358e8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -623,7 +649,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6cd28d2f-d713-42a4-b839-8a3a18ba1b8b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-448c918c-05a0-47d2-9a42-7d6cc11358e8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -674,12 +700,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6cd28d2f-d713-42a4-b839-8a3a18ba1b8b button.colab-df-convert');
+          document.querySelector('#df-448c918c-05a0-47d2-9a42-7d6cc11358e8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6cd28d2f-d713-42a4-b839-8a3a18ba1b8b');
+          const element = document.querySelector('#df-448c918c-05a0-47d2-9a42-7d6cc11358e8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -772,7 +798,7 @@ Name: variety, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ac547292-d97e-4164-9d0d-690d003d5b86">
+  <div id="df-4b949d71-a7e1-474d-94cd-e0d86171b040">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -843,7 +869,7 @@ Name: variety, dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ac547292-d97e-4164-9d0d-690d003d5b86')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4b949d71-a7e1-474d-94cd-e0d86171b040')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -894,12 +920,12 @@ Name: variety, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ac547292-d97e-4164-9d0d-690d003d5b86 button.colab-df-convert');
+          document.querySelector('#df-4b949d71-a7e1-474d-94cd-e0d86171b040 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ac547292-d97e-4164-9d0d-690d003d5b86');
+          const element = document.querySelector('#df-4b949d71-a7e1-474d-94cd-e0d86171b040');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1009,7 +1035,7 @@ Name: variety, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2c442a71-31c9-46e6-b1e0-3f8e51e6c7e8">
+  <div id="df-c6bb3041-ff84-409b-b0f5-2157badc637e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1088,7 +1114,7 @@ Name: variety, dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-2c442a71-31c9-46e6-b1e0-3f8e51e6c7e8')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c6bb3041-ff84-409b-b0f5-2157badc637e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1139,12 +1165,12 @@ Name: variety, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-2c442a71-31c9-46e6-b1e0-3f8e51e6c7e8 button.colab-df-convert');
+          document.querySelector('#df-c6bb3041-ff84-409b-b0f5-2157badc637e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-2c442a71-31c9-46e6-b1e0-3f8e51e6c7e8');
+          const element = document.querySelector('#df-c6bb3041-ff84-409b-b0f5-2157badc637e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1183,7 +1209,7 @@ Name: variety, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-103e4cf0-eb65-4f26-ba5b-fc04b2c8d85d">
+  <div id="df-1325b3ce-bbd8-4c16-9581-79aaaef1a67a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1269,7 +1295,7 @@ Name: variety, dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-103e4cf0-eb65-4f26-ba5b-fc04b2c8d85d')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1325b3ce-bbd8-4c16-9581-79aaaef1a67a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1320,12 +1346,12 @@ Name: variety, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-103e4cf0-eb65-4f26-ba5b-fc04b2c8d85d button.colab-df-convert');
+          document.querySelector('#df-1325b3ce-bbd8-4c16-9581-79aaaef1a67a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-103e4cf0-eb65-4f26-ba5b-fc04b2c8d85d');
+          const element = document.querySelector('#df-1325b3ce-bbd8-4c16-9581-79aaaef1a67a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});

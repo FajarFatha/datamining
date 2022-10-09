@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="K-Mean Clustering (Tugas 5)" href="notebooks5.html" />
@@ -373,8 +375,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diskritisasi">
-   Diskritisasi
+  <a class="reference internal nav-link" href="#dasar-teori">
+   Dasar Teori
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementasi">
+   Implementasi
   </a>
  </li>
 </ul>
@@ -397,8 +404,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diskritisasi">
-   Diskritisasi
+  <a class="reference internal nav-link" href="#dasar-teori">
+   Dasar Teori
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementasi">
+   Implementasi
   </a>
  </li>
 </ul>
@@ -413,8 +425,24 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="decission-tree-tugas-6">
 <h1>Decission Tree (Tugas 6)<a class="headerlink" href="#decission-tree-tugas-6" title="Permalink to this headline">#</a></h1>
-<section id="diskritisasi">
-<h2>Diskritisasi<a class="headerlink" href="#diskritisasi" title="Permalink to this headline">#</a></h2>
+<section id="dasar-teori">
+<h2>Dasar Teori<a class="headerlink" href="#dasar-teori" title="Permalink to this headline">#</a></h2>
+<p><strong>Pengertian Decision Tree</strong></p>
+<p>Decision Tree (Pohon keputusan) adalah jenis pembelajaran mesin terawasi(supervise) yang digunakan untuk mengkategorikan atau membuat prediksi berdasarkan bagaimana serangkaian pertanyaan sebelumnya dijawab.
+Supervise artinya model dilatih dan diuji pada sekumpulan data yang berisi kategorisasi yang diinginkan.</p>
+<p><strong>Jenis Decision Tree</strong></p>
+<p>Ada dua jenis utama pohon keputusan berdasarkan variabel sasaran, yaitu pohon keputusan variabel kategorikal dan pohon keputusan variabel kontinu.</p>
+<ol class="simple">
+<li><p>Pohon keputusan variabel kategori
+Sebuah pohon keputusan variabel kategoris termasuk variabel target kategoris dibagi ke dalam kategori. Misalnya, kategori bisa ya atau tidak. Kategori berarti bahwa setiap tahap proses pengambilan keputusan termasuk dalam salah satu kategori ini, dan tidak ada di antaranya.</p></li>
+<li><p>Pohon keputusan variabel kontinu
+Pohon keputusan variabel kontinu adalah pohon keputusan dengan variabel target kontinu. Misalnya, pendapatan individu yang pendapatannya tidak diketahui dapat diprediksi berdasarkan informasi yang tersedia seperti pekerjaan, usia, dan variabel kontinu lainnya.</p></li>
+</ol>
+<p><strong>Rumus Gini Index</strong>
+$<span class="math notranslate nohighlight">\( Gini Index = 1-Σ_i^n (P_i)^2 \)</span>$</p>
+</section>
+<section id="implementasi">
+<h2>Implementasi<a class="headerlink" href="#implementasi" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -437,7 +465,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-37235b67-040c-444c-bcc9-cc877fa6d2a9">
+  <div id="df-7d931908-b340-4530-9e18-1082323ca7d8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -557,7 +585,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-37235b67-040c-444c-bcc9-cc877fa6d2a9')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7d931908-b340-4530-9e18-1082323ca7d8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -608,12 +636,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-37235b67-040c-444c-bcc9-cc877fa6d2a9 button.colab-df-convert');
+          document.querySelector('#df-7d931908-b340-4530-9e18-1082323ca7d8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-37235b67-040c-444c-bcc9-cc877fa6d2a9');
+          const element = document.querySelector('#df-7d931908-b340-4530-9e18-1082323ca7d8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -659,7 +687,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/notebooks6_5_0.png" src="_images/notebooks6_5_0.png" />
+<img alt="_images/notebooks6_7_0.png" src="_images/notebooks6_7_0.png" />
 </div>
 </div>
 </section>
