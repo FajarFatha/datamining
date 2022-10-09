@@ -437,7 +437,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6d960a28-f288-4ae8-95f8-792c59693836">
+  <div id="df-8623fc3c-e3bb-4399-b4fa-208966fdab39">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -557,7 +557,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6d960a28-f288-4ae8-95f8-792c59693836')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8623fc3c-e3bb-4399-b4fa-208966fdab39')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -608,12 +608,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6d960a28-f288-4ae8-95f8-792c59693836 button.colab-df-convert');
+          document.querySelector('#df-8623fc3c-e3bb-4399-b4fa-208966fdab39 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6d960a28-f288-4ae8-95f8-792c59693836');
+          const element = document.querySelector('#df-8623fc3c-e3bb-4399-b4fa-208966fdab39');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -650,8 +650,6 @@ title="Print to PDF"
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 <span class="c1">#create the tree plot</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span>
-                   <span class="c1">#use the feature names stored</span>
-                   <span class="n">feature_names</span> <span class="o">=</span> <span class="n">feature_names</span><span class="p">,</span>
                    <span class="c1">#use the class names stored</span>
                    <span class="n">class_names</span> <span class="o">=</span> <span class="n">labels</span><span class="p">,</span>
                    <span class="n">rounded</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -664,14 +662,14 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">NameError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">0</span><span class="n">d1e3d0a8a06</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">e4be599dd326</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">a</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                    <span class="c1">#use the feature names stored</span>
-<span class="ne">----&gt; </span><span class="mi">6</span>                    <span class="n">feature_names</span> <span class="o">=</span> <span class="n">feature_names</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>                    <span class="c1">#use the class names stored</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>                    <span class="n">class_names</span> <span class="o">=</span> <span class="n">labels</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>                    <span class="c1">#use the class names stored</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>                    <span class="n">class_names</span> <span class="o">=</span> <span class="n">labels</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>                    <span class="n">rounded</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>                    <span class="n">filled</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
 
-<span class="ne">NameError</span>: name &#39;feature_names&#39; is not defined
+<span class="ne">NameError</span>: name &#39;labels&#39; is not defined
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 720x720 with 0 Axes&gt;
