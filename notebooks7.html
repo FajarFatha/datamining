@@ -398,8 +398,18 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membagi-data-ke-x-dan-y">
+     Membagi data ke X dan y
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#membagi-data-ke-data-test-dan-data-training">
      Membagi Data Ke data test dan data training
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membangun-knn-classifier">
+     Membangun knn Classifier
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -415,8 +425,33 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-modul">
+     Import Modul
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengambil-data">
+     Mengambil Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#split-data">
      Split data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membangun-model-decision-tree">
+     Membangun Model Decision Tree
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#akurasi">
+     Akurasi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualisasi-decision-tree">
+     Visualisasi Decision Tree
     </a>
    </li>
   </ul>
@@ -461,8 +496,18 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membagi-data-ke-x-dan-y">
+     Membagi data ke X dan y
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#membagi-data-ke-data-test-dan-data-training">
      Membagi Data Ke data test dan data training
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membangun-knn-classifier">
+     Membangun knn Classifier
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -478,8 +523,33 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-modul">
+     Import Modul
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengambil-data">
+     Mengambil Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#split-data">
      Split data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membangun-model-decision-tree">
+     Membangun Model Decision Tree
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#akurasi">
+     Akurasi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualisasi-decision-tree">
+     Visualisasi Decision Tree
     </a>
    </li>
   </ul>
@@ -514,17 +584,14 @@ title="Print to PDF"
 <h3>Mengambil Dataset<a class="headerlink" href="#mengambil-dataset" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#read in the data using pandas</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/FajarFatha/datamining/main/BreastCancerCoimbraDataSet.csv&quot;</span><span class="p">)</span>
-
-<span class="c1">#check data has been read in properly</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/FajarFatha/datamining/main/BreastCancerCoimbraDataSet.csv&quot;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e8097403-c451-40f1-8314-59329c33bd1a">
+  <div id="df-06602527-30eb-4e36-acbf-1e2c9e2c2ed1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -625,7 +692,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e8097403-c451-40f1-8314-59329c33bd1a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-06602527-30eb-4e36-acbf-1e2c9e2c2ed1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -676,12 +743,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e8097403-c451-40f1-8314-59329c33bd1a button.colab-df-convert');
+          document.querySelector('#df-06602527-30eb-4e36-acbf-1e2c9e2c2ed1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e8097403-c451-40f1-8314-59329c33bd1a');
+          const element = document.querySelector('#df-06602527-30eb-4e36-acbf-1e2c9e2c2ed1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -717,18 +784,20 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="membagi-data-ke-x-dan-y">
+<h3>Membagi data ke X dan y<a class="headerlink" href="#membagi-data-ke-x-dan-y" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#create a dataframe with all training data except the target column</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># X tanpa label</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Classification&quot;</span><span class="p">])</span>
-<span class="c1">#check that the target variable has been removed</span>
 <span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-136bd1e8-55ce-42ca-922a-013b96855819">
+  <div id="df-a3b61379-ca80-406c-8ccd-100cae482494">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -823,7 +892,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-136bd1e8-55ce-42ca-922a-013b96855819')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a3b61379-ca80-406c-8ccd-100cae482494')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -874,12 +943,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-136bd1e8-55ce-42ca-922a-013b96855819 button.colab-df-convert');
+          document.querySelector('#df-a3b61379-ca80-406c-8ccd-100cae482494 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-136bd1e8-55ce-42ca-922a-013b96855819');
+          const element = document.querySelector('#df-a3b61379-ca80-406c-8ccd-100cae482494');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -902,9 +971,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#separate target values</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#y labelnya saja</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Classification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
-<span class="c1">#view target values</span>
 <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">116</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -925,8 +993,7 @@ title="Print to PDF"
 <h3>Membagi Data Ke data test dan data training<a class="headerlink" href="#membagi-data-ke-data-test-dan-data-training" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#split dataset into train and test data</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -962,11 +1029,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="membangun-knn-classifier">
+<h3>Membangun knn Classifier<a class="headerlink" href="#membangun-knn-classifier" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create KNN classifier</span>
-<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">metric</span> <span class="o">=</span> <span class="s1">&#39;minkowski&#39;</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
-<span class="c1"># Fit the classifier to the data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">metric</span> <span class="o">=</span> <span class="s1">&#39;minkowski&#39;</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1053,6 +1121,8 @@ Confusion Matrix: [[10  1]
 </section>
 <section id="decision-tree">
 <h2>Decision Tree<a class="headerlink" href="#decision-tree" title="Permalink to this headline">#</a></h2>
+<section id="import-modul">
+<h3>Import Modul<a class="headerlink" href="#import-modul" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1064,6 +1134,9 @@ Confusion Matrix: [[10  1]
 </div>
 </div>
 </div>
+</section>
+<section id="mengambil-data">
+<h3>Mengambil Data<a class="headerlink" href="#mengambil-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/FajarFatha/datamining/main/BreastCancerCoimbraDataSet.csv&quot;</span><span class="p">)</span>
@@ -1073,7 +1146,7 @@ Confusion Matrix: [[10  1]
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4ecc503d-63d6-4585-9174-fde0c2437911">
+  <div id="df-f99791a8-69e6-41b6-b42a-ccf338a788dc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1253,7 +1326,7 @@ Confusion Matrix: [[10  1]
 </table>
 <p>116 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4ecc503d-63d6-4585-9174-fde0c2437911')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f99791a8-69e6-41b6-b42a-ccf338a788dc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1304,12 +1377,12 @@ Confusion Matrix: [[10  1]
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4ecc503d-63d6-4585-9174-fde0c2437911 button.colab-df-convert');
+          document.querySelector('#df-f99791a8-69e6-41b6-b42a-ccf338a788dc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4ecc503d-63d6-4585-9174-fde0c2437911');
+          const element = document.querySelector('#df-f99791a8-69e6-41b6-b42a-ccf338a788dc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1338,6 +1411,7 @@ Confusion Matrix: [[10  1]
 </div>
 </div>
 </div>
+</section>
 <section id="split-data">
 <h3>Split data<a class="headerlink" href="#split-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
@@ -1347,20 +1421,24 @@ Confusion Matrix: [[10  1]
 </div>
 </div>
 </div>
+</section>
+<section id="membangun-model-decision-tree">
+<h3>Membangun Model Decision Tree<a class="headerlink" href="#membangun-model-decision-tree" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Decision Tree classifer object</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># membangun decision tree menggunakan gini</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;gini&quot;</span><span class="p">)</span>
-
-<span class="c1"># Train Decision Tree Classifer</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
 
-<span class="c1">#Predict the response for test dataset</span>
+<span class="c1">#Prediksi data test</span>
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="akurasi">
+<h3>Akurasi<a class="headerlink" href="#akurasi" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy:&quot;</span><span class="p">,</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
@@ -1373,6 +1451,9 @@ Confusion Matrix: [[10  1]
 </div>
 </div>
 </div>
+</section>
+<section id="visualisasi-decision-tree">
+<h3>Visualisasi Decision Tree<a class="headerlink" href="#visualisasi-decision-tree" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
@@ -1387,7 +1468,7 @@ Confusion Matrix: [[10  1]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/notebooks7_26_0.png" src="_images/notebooks7_26_0.png" />
+<img alt="_images/notebooks7_33_0.png" src="_images/notebooks7_33_0.png" />
 </div>
 </div>
 </section>
